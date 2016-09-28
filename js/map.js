@@ -44,7 +44,7 @@ map.on('load', function () {
     'paint': {
       'circle-radius': {
         'base': 1.75,
-        'stops': [[12, 8], [22, 180]]
+        'stops': [[5, 3], [12, 8], [22, 180]]
       },
       'circle-color': {
         property: 'Status',
