@@ -7,16 +7,18 @@
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.24.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.24.0/mapbox-gl.css' rel='stylesheet' />
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <style>
-        body { margin:0; padding:0; }
-        #map { position:absolute; top:0; bottom:0; width:100%; }
-    </style>
+    <link href='css/style.css' rel='stylesheet' />
 </head>
 <body>
 
-<div id='map'></div>
+  <!-- Spinner -->
+  <div id="spinner">
+    <div class="sk-spinner sk-spinner-pulse"></div>
+  </div>
 
-<script src='js/map.js'></script>
+  <div id='map'></div>
+
+  <script src='js/map.js'></script>
 
 </body>
 </html>

@@ -1,3 +1,11 @@
+function removeSpinner () {
+  // Hide spinner and remove it
+  document.getElementById("spinner").style.opacity = "0";
+  setTimeout(function () {
+    document.getElementById("spinner").style.display = "none";
+  }, 2000);
+}
+
 
 // Get points geojson data //
 var propertyData = (function () {
@@ -11,6 +19,7 @@ var propertyData = (function () {
             propertyData = data;
         }
     });
+    removeSpinner();
     return propertyData;
 })();
 
