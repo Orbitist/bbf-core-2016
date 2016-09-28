@@ -5,7 +5,7 @@ var propertyData = (function () {
     $.ajax({
         'async': false,
         'global': false,
-        'url': 'data/core2016.geojson',
+        'url': 'data/properties.geojson',
         'dataType': "json",
         'success': function (data) {
             propertyData = data;
@@ -36,7 +36,7 @@ map.on('load', function () {
     'paint': {
       'circle-radius': {
         'base': 1.75,
-        'stops': [[12, 5], [22, 180]]
+        'stops': [[12, 8], [22, 180]]
       },
       'circle-color': {
         property: 'Status',
@@ -49,4 +49,29 @@ map.on('load', function () {
       }
     }
   });
+});
+
+map.on('click', function (e) {
+  var features = map.queryRenderedFeatures(e.point, { layers: ['properties'] });
+  if (!features.length) {
+      return;
+  }
+  var feature = features[0];
+  var popup = new mapboxgl.Popup()
+    .setLngLat(feature.geometry.coordinates)
+    .setHTML(
+      '<p>Project: ' + feature.properties.Project + '</p>'
+      '<p>Developer\/General Contractor: ' + feature.properties.Project + '</p>'
+      '<p>' + feature.properties.Project + '</p>'
+    )
+    .addTo(map);
+  if (features.length) {
+    // Get coordinates from the symbol and center the map on those coordinates
+    map.flyTo({center: features[0].geometry.coordinates});
+  }
+});
+
+map.on('mousemove', function (e) {
+    var features = map.queryRenderedFeatures(e.point, { layers: ['properties'] });
+    map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
 });

@@ -1,4 +1,4 @@
-Area,Mapped,Number,Project,Address,City,State,Latitude,Longitude,Description,Developer_General Contractor,Cost,Date,Status,Checked,Map Circle color
+Area,Mapped,Number,Project,Address,City,State,Latitude,Longitude,Description,Developer_General_Contractor,Cost,Date,Status,Checked,Map Circle color
 01-Medical Campus,YES,1,Wayne & Waldorf,1106-1110 Main St.,Buffalo,NY,42.9039560,-78.8690050,,Sinatra & Co.,$5.3,2015,Completed,Sinatra,#CA6266
 01-Medical Campus,YES,2,Jacobs Institute,875 Ellicott St.,Buffalo,NY,42.9016180,-78.8660700,"20,800 SF medical device prototyping facility",LPCiminelli Inc.,$9.0,2015,Completed,Empire State,#CA6266
 01-Medical Campus,YES,3,Conventus ,1001 Main St.,Buffalo,NY,42.9008450,-78.8687940,"300,000 SF, six-story medical office building with below ground parking. Connected to John R. Oishei Children's Hospital and UB School of Medicine","Ciminelli Real Estate Corp, LPCiminelli Inc.",$110.0,2015,Completed,"ECIDA/Ciminelli, LPCiminelli",#CA6266
