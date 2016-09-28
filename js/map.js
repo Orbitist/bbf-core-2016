@@ -19,7 +19,6 @@ var propertyData = (function () {
             propertyData = data;
         }
     });
-    removeSpinner();
     return propertyData;
 })();
 
@@ -80,3 +79,5 @@ map.on('mousemove', function (e) {
     var features = map.queryRenderedFeatures(e.point, { layers: ['properties'] });
     map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
 });
+
+removeSpinner();
