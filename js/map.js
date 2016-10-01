@@ -91,7 +91,7 @@ map.on('load', function () {
       "icon-allow-overlap": true,
       "icon-offset": [0, -5],
       "icon-ignore-placement": true,
-      "text-field": "test",
+      "text-field": "{point_title}",
       "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
       "text-size": {
         "stops": [
