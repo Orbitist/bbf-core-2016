@@ -6,6 +6,20 @@ function removeSpinner () {
   }, 2000);
 }
 
+// Get Medical Campus Data
+var medicalCampus = (function () {
+    var propertyData = null;
+    $.ajax({
+        'async': false,
+        'global': false,
+        'url': 'https://app.orbitist.com/api/v1/points/2780.json',
+        'dataType': "json",
+        'success': function (data) {
+            propertyData = data;
+        }
+    });
+    return propertyData;
+})();
 
 // Get points geojson data //
 var propertyData = (function () {
@@ -31,12 +45,12 @@ var map = new mapboxgl.Map({
   center: [-78.87, 42.88]
 });
 
+// PROPERTY DATA
 map.on('load', function () {
   map.addSource("properties", {
     'type': 'geojson',
     'data': propertyData
   });
-
   map.addLayer({
     'id': 'properties',
     'type': 'circle',
@@ -57,6 +71,53 @@ map.on('load', function () {
       }
     }
   });
+// END PROPERTY DATA  
+
+// MEDICAL CAMPUS
+  map.addSource("medicalCampus", {
+    type: "geojson",
+    data: medicalCampus
+  });
+  map.addLayer({
+    "id": "points",
+    "type": "symbol",
+    "source": "medicalCampus",
+    "layout": {
+      "icon-image": "circle-15",
+      "icon-size": 2,
+      "icon-allow-overlap": true,
+      "icon-offset": [0, -5],
+      "icon-ignore-placement": true,
+      "text-field": textFieldCode,
+      "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+      "text-size": {
+        "stops": [
+          [8, 1],
+          [12, 12]
+        ]
+      },
+      "text-offset": [0, 0.5],
+      "text-anchor": "top",
+      "text-allow-overlap": true
+    },
+    "paint": {
+      "icon-opacity": 0,
+      "text-halo-width": 1,
+      "text-halo-color": "white"
+    }
+  });
+  for (var i = 0; i < medicalCampus.features.length; i++) {
+      var feature = medicalCampus.features[i];
+      var marker = document.createElement('img');
+      marker.src = feature.properties.point_marker_url;
+      marker.style.width = "30px";
+      marker.style.height = "30px";
+      new mapboxgl.Marker(marker)
+          .setLngLat(feature.geometry.coordinates)
+          .addTo(map);
+  }
+// END MEDICAL CAMPUS
+
 });
 
 map.on('click', function (e) {
