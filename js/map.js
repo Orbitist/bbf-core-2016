@@ -95,8 +95,8 @@ map.on('load', function () {
       "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
       "text-size": {
         "stops": [
-          [12, 0],
-          [15, 12]
+          [15, 0],
+          [18, 12]
         ]
       },
       "text-offset": [0, 0.5],
