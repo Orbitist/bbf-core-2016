@@ -45,3 +45,10 @@ transition: 0.5s;
     -webkit-transform: scale(1);
             transform: scale(1);
     opacity: 0; } }
+
+
+.mapboxgl-marker {
+  margin-left: -15px;
+  margin-top: -30px;
+  cursor: pointer;
+}

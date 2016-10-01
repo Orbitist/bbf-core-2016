@@ -95,8 +95,8 @@ map.on('load', function () {
       "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
       "text-size": {
         "stops": [
-          [8, 1],
-          [12, 12]
+          [12, 0],
+          [15, 12]
         ]
       },
       "text-offset": [0, 0.5],
@@ -140,7 +140,7 @@ map.on('click', function (e) {
 });
 
 map.on('mousemove', function (e) {
-    var features = map.queryRenderedFeatures(e.point, { layers: ['properties'] });
+    var features = map.queryRenderedFeatures(e.point, { layers: ['properties', 'medicalCampus'] });
     map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
 });
 
