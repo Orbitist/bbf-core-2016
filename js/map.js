@@ -47,6 +47,7 @@ var map = new mapboxgl.Map({
 
 // PROPERTY DATA
 map.on('load', function () {
+
   map.addSource("properties", {
     'type': 'geojson',
     'data': propertyData
@@ -55,6 +56,7 @@ map.on('load', function () {
     'id': 'properties',
     'type': 'circle',
     'source': 'properties',
+    'source-layer': 'property',
     'paint': {
       'circle-radius': {
         'base': 1.75,
@@ -79,9 +81,10 @@ map.on('load', function () {
     data: medicalCampus
   });
   map.addLayer({
-    "id": "points",
+    "id": "medicalCampus",
     "type": "symbol",
     "source": "medicalCampus",
+    'source-layer': 'medical',
     "layout": {
       "icon-image": "circle-15",
       "icon-size": 2,
