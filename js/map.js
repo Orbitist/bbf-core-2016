@@ -67,7 +67,7 @@ map.on('click', function (e) {
   var feature = features[0];
   var popup = new mapboxgl.Popup()
     .setLngLat(feature.geometry.coordinates)
-    .setHTML('<p>Project: ' + feature.properties.Project + '</p><p>Developer\/General Contractor: ' + feature.properties.Developer_General_Contractor + '</p><p>Cost: ' + feature.properties.Cost + ' Million</p><p>Status: ' + feature.properties.Status + '</p><p>Description: ' + feature.properties.Description + '</p>')
+    .setHTML('<p><strong>Project:</strong> ' + feature.properties.Project + '</br><strong>Developer\/General Contractor:</strong> ' + feature.properties.Developer_General_Contractor + '</br><strong>Cost:</strong> $' + feature.properties.Cost + ' Million</br><strong>Status:</strong> ' + feature.properties.Status + '</br><strong>Description:</strong> ' + feature.properties.Description + '</p>')
     .addTo(map);
   if (features.length) {
     // Get coordinates from the symbol and center the map on those coordinates
