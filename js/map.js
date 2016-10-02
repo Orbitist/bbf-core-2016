@@ -42,7 +42,8 @@ var map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/buffalobusinessfirst/citndoi0c003m2iprlhyvg4ov',
   zoom: 12,
-  center: [-78.87, 42.88]
+  center: [-78.87, 42.88],
+  hash: true
 });
 
 // PROPERTY DATA
@@ -70,7 +71,8 @@ map.on('load', function () {
           ['Under', '#009770'],
           ['Z-Proposed', '#53578f']
         ]
-      }
+      },
+      'circle-opacity': '0.5'
     }
   });
 // END PROPERTY DATA
@@ -139,6 +141,8 @@ map.on('click', function (e) {
   }
 });
 
+
+// Hover over pointer
 map.on('mousemove', function (e) {
     var features = map.queryRenderedFeatures(e.point, { layers: ['properties', 'medicalCampus'] });
     map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
