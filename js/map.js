@@ -72,7 +72,7 @@ map.on('load', function () {
           ['Z-Proposed', '#53578f']
         ]
       },
-      'circle-opacity': '0.5'
+      'circle-opacity': 0.5
     }
   });
 // END PROPERTY DATA
