@@ -4,6 +4,17 @@ html {
   padding:0;
 }
 
+#orbitist-watermark {
+  position: fixed;
+  right: 10px;
+  bottom: 40px;
+  width: 100px;
+  opacity: 60%;
+}
+#orbitist-watermark:hover {
+  opacity: 100%;
+}
+
 /* Pulsate Class */
 .pulsate {
   -webkit-animation: pulsate 1s ease-out;
