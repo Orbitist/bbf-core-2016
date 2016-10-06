@@ -35,6 +35,14 @@
   left: 310px;
 }
 
+.map-geolocate {
+  position: absolute;
+}
+
+.map-reset {
+  position: absolute;
+}
+
 }
 
 @media (min-width: 500px) {
