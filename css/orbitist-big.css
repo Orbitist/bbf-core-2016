@@ -35,14 +35,6 @@
   left: 310px;
 }
 
-.map-geolocate {
-  right:calc(50% - 297px);
-}
-
-.map-reset {
-  right:calc(50% - 338px);
-}
-
 }
 
 @media (min-width: 500px) {
