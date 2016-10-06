@@ -7,12 +7,13 @@ html {
 #orbitist-watermark {
   position: fixed;
   right: 10px;
-  bottom: 40px;
-  width: 100px;
-  opacity: 60%;
+  bottom: 60px;
+  width: 50px;
+  opacity: 0.6;
+  z-index: 1;
 }
 #orbitist-watermark:hover {
-  opacity: 100%;
+  opacity: 1;
 }
 
 /* Pulsate Class */
