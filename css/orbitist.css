@@ -108,7 +108,9 @@ html {
 .map-list-item img {
   float: left;
   border-radius: 50px;
-  width: 33px;
+  width: 20px;
+  margin-top: 12px;
+  margin-right: 8px;
 }
 .map-list-item p {
   color: #eee;
