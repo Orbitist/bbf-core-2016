@@ -20,6 +20,7 @@ html {
   position: absolute;
   left: 10px;
   bottom: 60px;
+  z-index: 1;
 }
 #orbitist-key img {
   height: 15px;
