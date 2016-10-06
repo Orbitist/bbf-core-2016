@@ -87,7 +87,6 @@ jQuery(document).ready(function () {
           p1 = { x: e.pageX, y: e.pageY },
           d = Math.sqrt(Math.pow(p1.x - p0.x, 2) + Math.pow(p1.y - p0.y, 2));
       if (d < 4) {
-          jQuery('.map').css({"left": "0","width": "100%"}),
           jQuery('.map-info').css({"left": "100%"}),
           jQuery('.map-toggle-info').css({"left": "calc(100% + 10px)"}),
           jQuery('.map-toggle-list').css({"right": "calc(100% + 10px)"}),
