@@ -106,15 +106,12 @@ html {
   color: #333;
 }
 .map-list-item img {
-  display: none;
   float: left;
   border-radius: 50px;
-  margin-top: 10px;
+  width: 33px;
 }
 .map-list-item p {
   color: #eee;
-  margin-left: 110px;
-  margin-top: 30px;
 }
 
 .map-help {
