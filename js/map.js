@@ -8,11 +8,11 @@ else {
 }
 
 // Set Url for points info API
-var pointsInfoApi = '/api/v1/points/' + mapid + '.json';
+var pointsInfoApi = 'https://app.orbitist.com/api/v1/points/' + mapid + '.json';
 
 // Do things if in edit mode
 if (mode == 'edit'){
-  var pointsInfoApi = '/api/v1/points/edit/' + mapid + '.json';
+  var pointsInfoApi = 'https://app.orbitist.com/api/v1/points/edit/' + mapid + '.json';
 }
 
 
