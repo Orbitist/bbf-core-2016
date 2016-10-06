@@ -32,6 +32,15 @@
 
 .map-help {
   font-size: 20px;
+  left: 310px;
+}
+
+.map-geolocate {
+  right:calc(50% - 297px);
+}
+
+.map-reset {
+  right:calc(50% - 338px);
 }
 
 }
