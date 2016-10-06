@@ -1,9 +1,5 @@
 function renderMapList() {
 
-  // Create reset button
-  var mapResetBotton = '<hr><div class="map-list-item" id="map-reset-bottom"><p><i class="fa fa-refresh" aria-hidden="true"></i> Reset Map</p></div><script>document.getElementById("map-reset-bottom").addEventListener("click", function () {map.fitBounds(bounds);});</script>';
-  $('div.map-list').append(mapResetBotton);
-
   // Create the map list items
   for (var i = 0; i < orbitistPointsGeojsonCleaned.features.length; i++) {
     var feature = orbitistPointsGeojsonCleaned.features[i];
