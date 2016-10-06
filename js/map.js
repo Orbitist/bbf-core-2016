@@ -62,7 +62,7 @@ else {
 var map = new mapboxgl.Map({
     container: 'map',
     pitch: 0,
-    hash: true,
+    hash: false,
     scrollZoom: scrollZoomSetting
 });
 
