@@ -7,7 +7,7 @@ html {
 /* Pulsate Class */
 .pulsate {
   -webkit-animation: pulsate 1s ease-out;
-  -webkit-animation-iteration-count: infinite; 
+  -webkit-animation-iteration-count: infinite;
 }
 @-webkit-keyframes pulsate {
     0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
@@ -87,8 +87,9 @@ html {
 .map-list-item {
   position: relative;
   cursor: pointer;
-  height: 120px;
   padding: 10px;
+  display: inline-block;
+  width: 100%;
 }
 #map-reset, #map-reset-bottom {
   height: 30px;
@@ -105,7 +106,7 @@ html {
   color: #333;
 }
 .map-list-item img {
-  width: 100px;
+  display: none;
   float: left;
   border-radius: 50px;
   margin-top: 10px;

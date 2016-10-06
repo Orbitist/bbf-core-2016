@@ -12,7 +12,7 @@
 .map-list {
   left: 0px;
   width: 300px;
-  background-color: #eee;
+  background-color: #333;
 }
 
 @keyframes popup_animation {
