@@ -182,8 +182,7 @@ var globalCoords = null;
 //Reset map view
 jQuery('.map-reset').click(function () {
   allowFlyTo = false;
-  map.setPitch(0);
-  map.fitBounds(bounds, { padding: '50' });
+  map.fitBounds(bounds, { padding: '50', pitch: '0' });
 });
 
 function centerMap (position){
