@@ -1,0 +1,42 @@
+@media (min-width: 800px) {
+
+.map-info {
+  width: 500px;
+}
+
+.map-list {
+  left: -300px;
+  width: 300px;
+}
+
+@keyframes popup_animation {
+    from {top: -90%;}
+    to {top: 20px;}
+}
+
+.mapboxgl-popup {
+  top: 20px;
+  left: 20px;
+  min-width: 500px;
+}
+
+.map-list {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.map-list-item:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.map-help {
+  font-size: 20px;
+}
+
+}
+
+@media (min-width: 500px) {
+  .mapboxgl-popup-close-button {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+  }
+}
