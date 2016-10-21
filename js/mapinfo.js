@@ -52,7 +52,7 @@ $(document).ready(
             }
             else {
               mapboxgl.accessToken = data[i].map_mapbox_access_token;
-              map.setStyle('http://labs.orbitist.com/bbf-core-2016/styles/orbitistLight.json');
+              map.setStyle(data[i].map_mapbox_style);
             }
             //Google Analytics
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
