@@ -87,7 +87,7 @@ if (numberedPoints == "true") {
         "icon-offset": [0, -5],
         "icon-ignore-placement": true,
         "text-field": textFieldCode,
-        "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+        "text-font": ["Open Sans Semibold"],
         "text-size": {
           "stops": [
             [fadeLabel, 0],
